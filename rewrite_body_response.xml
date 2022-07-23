@@ -3,7 +3,7 @@
 <rewriteSet-array>
   <rewriteSet>
     <active>true</active>
-    <name>remove query param</name>
+    <name>body_response</name>
     <hosts>
       <locationPatterns>
         <locationMatch>
@@ -20,13 +20,13 @@
     <rules>
       <rewriteRule>
         <active>true</active>
-        <ruleType>10</ruleType>
-        <matchHeader>name</matchHeader>
-        <matchValue>Alex</matchValue>
+        <ruleType>7</ruleType>
+        <matchValue>&quot;u_salary_1_5_year&quot;: 8000</matchValue>
         <matchHeaderRegex>false</matchHeaderRegex>
         <matchValueRegex>false</matchValueRegex>
-        <matchRequest>false</matchRequest>
-        <matchResponse>false</matchResponse>
+        <matchRequest>true</matchRequest>
+        <matchResponse>true</matchResponse>
+        <newValue>&quot;u_salary_1_5_year&quot;: 15000</newValue>
         <newHeaderRegex>false</newHeaderRegex>
         <newValueRegex>false</newValueRegex>
         <matchWholeValue>false</matchWholeValue>
